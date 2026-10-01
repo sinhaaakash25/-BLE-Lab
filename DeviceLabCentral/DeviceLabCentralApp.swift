@@ -2,7 +2,12 @@
 //  DeviceLabCentralApp.swift
 //  DeviceLabCentral
 //
-//  Created by Aakash Sinha on 30/09/26.
+//  Author: Aakash Sinha
+//  Created: 30/09/26
+//
+//  App entry point for the BLE central target. This target scans for the
+//  peripheral app, connects to it, reads data, subscribes to telemetry, and
+//  sends commands.
 //
 
 import SwiftUI
@@ -11,7 +16,8 @@ import SwiftUI
 struct DeviceLabCentralApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // The coordinator creates dependencies and decides which screen to show.
+            CentralAppCoordinator()
         }
     }
 }
